@@ -11,20 +11,38 @@
     <p>Conversió de funcions: <br>
        Tens una funció add que accepta dos paràmetres i retorna la seva suma. <br>
        Converteix-la en una funció de fletxa. Per exemple: function add(a, b) {return a + b;}.
-       Ver en consola!</p>
+    </p>
+
+    <h1>Exercici 1.2: Funció de fletxa sense paràmetres:</h1>
+       <p>Funció de fletxa sense paràmetres: <br>
+        Crea una funció de fletxa anomenada randomNumber que no necessiti paràmetres <br>
+        i que retorni un número aleatori entre 0 i 100.</p>
+
+    <h1>Exercici 1.3: Ús de 'this' en les funcions de fletxa: </h1>
+    <p>Ús de 'this' en les funcions de fletxa: <br>
+        Crea una classe person que tingui una propietat name i una funció greet que utilitzi <br>
+        una funció de fletxa. La funció ha d'imprimir una salutació que inclogui el nom de la persona. <br>
+        Per exemple: console.log(Hola, ${this.name});.</p>
+
+        <p>Veure en la consola!</p>
 
     <script>
         //Función declarada tradicional
         function suma(a, b) {
             return a + b;
         }
-        //Función Arrow expresada 
+        //Función Arrow expressada 
         const sumaArrow = (a, b) => a + b;
 
-        //Ver en la consola
-        console.log(suma(2, 3));
-        console.log(sumaArrow(2, 3));   
-    </script>
-    
+        //Veure en la consola
+        console.log("Resultat función tradicional: " + suma(2, 3));
+        console.log("Resultat funcio ARROW: " + sumaArrow(2, 3));   
+
+        //Funció Arrow sense paràmetres
+        const randomNumber = () => Math.floor(Math.random() * 100);
+        console.log("Número aleatori entre el 0 i el 100. Arrodonit a la baixa: " + randomNumber());
+
+    </script>    
+
 </body>
 </html>
