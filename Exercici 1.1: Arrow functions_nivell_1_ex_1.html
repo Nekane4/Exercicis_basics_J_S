@@ -42,6 +42,17 @@
         const randomNumber = () => Math.floor(Math.random() * 100);
         console.log("Número aleatori entre el 0 i el 100. Arrodonit a la baixa: " + randomNumber());
 
+               // Ús de 'this' en las funcions flecha:
+       class Person {
+       constructor(name) {
+       this.name = name;
+       }
+       greet = () => console.log("Hola, " + this.name);
+       }   
+       const persona = new Person("Maydo");
+       //Cridar la funció
+       persona.greet();
+
     </script>    
 
 </body>
