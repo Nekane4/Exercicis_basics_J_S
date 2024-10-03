@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 1.1: Arrow functions</title>
+</head>
+<body>
+
+    <h1>Exercici 1.1: Arrow functions</h1>
+    <p>Conversió de funcions: <br>
+       Tens una funció add que accepta dos paràmetres i retorna la seva suma. <br>
+       Converteix-la en una funció de fletxa. Per exemple: function add(a, b) {return a + b;}.
+       Ver en consola!</p>
+
+    <script>
+        //Función declarada tradicional
+        function suma(a, b) {
+            return a + b;
+        }
+        //Función Arrow expresada 
+        const sumaArrow = (a, b) => a + b;
+
+        //Ver en la consola
+        console.log(suma(2, 3));
+        console.log(sumaArrow(2, 3));   
+    </script>
+    
+</body>
+</html>
