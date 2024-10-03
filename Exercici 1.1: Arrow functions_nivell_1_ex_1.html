@@ -24,6 +24,14 @@
         una funció de fletxa. La funció ha d'imprimir una salutació que inclogui el nom de la persona. <br>
         Per exemple: console.log(Hola, ${this.name});.</p>
 
+        <h1>Funció fletxa dins d'un loop</h1>
+        <p>Funció de fletxa dins d'un loop: <br>
+            Crea una funció anomenada printNumbers que accepti un <br>array de números i utilitzi un loop for per imprimir <br> cada número a la consola utilitzant una funció de fletxa.</p>
+    
+        <h1>Funció de fletxa amb 'setTimeout'</h1>
+        <p>Crea una funció de fletxa que imprimeixi un missatge a la consola després d'esperar 3 segons.</p>
+    
+
         <p>Veure en la consola!</p>
 
     <script>
@@ -34,15 +42,15 @@
         //Función Arrow expressada 
         const sumaArrow = (a, b) => a + b;
 
-        //Veure en la consola
+        //Veure amdues a la consola
         console.log("Resultat función tradicional: " + suma(2, 3));
         console.log("Resultat funcio ARROW: " + sumaArrow(2, 3));   
 
-        //Funció Arrow sense paràmetres
+        //Funció Arrow Math.random sense paràmetres
         const randomNumber = () => Math.floor(Math.random() * 100);
         console.log("Número aleatori entre el 0 i el 100. Arrodonit a la baixa: " + randomNumber());
 
-               // Ús de 'this' en las funcions flecha:
+       //Ús de 'this' en las funcions flecha:
        class Person {
        constructor(name) {
        this.name = name;
@@ -50,8 +58,23 @@
        greet = () => console.log("Hola, " + this.name);
        }   
        const persona = new Person("Maydo");
-       //Cridar la funció
        persona.greet();
+       
+
+       //Funció de fletxa dins d'un loop
+       const printNumbers = (numbers) => {
+        for (let i = 0; i < numbers.length; i++) {
+            const print = (numero) => console.log(numero);
+            print(numbers[i]);
+        }
+        }; 
+        const numeros = [1, 2, 3, 4, 5];
+        printNumbers(numeros);
+    
+        //Funció de fletxa amb 'setTimeout'
+        setTimeout(() => {
+            console.log("Hola, aquest és un missatge que s'ha imprès després de 3 segons");
+        }, 3000);
 
     </script>    
 
